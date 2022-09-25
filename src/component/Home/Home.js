@@ -1,11 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
+import { CatagoryRoni } from "../../App";
 import Catagory from "../Catagory/Catagory";
+
 
 const Home =(props)=>{
     const {count} = props;
+    const catagoryDDD = useContext(CatagoryRoni);
     return(
         <div style={{border:'2px solid black'}}>
-            <h1>Home Section : {count}</h1>
+            <h1>Home Section Part: {count}</h1>
+            <h3>This is Hi {catagoryDDD}</h3>
             <Catagory count={count}></Catagory>
             <AnatherPart></AnatherPart>
  
@@ -14,14 +18,15 @@ const Home =(props)=>{
 }
 
 function AnatherPart(){
+    const catagoryDDD = useContext(CatagoryRoni);
     return(
         <div>
             <div className="row">
                 <div className="col-md-6">
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. A blanditiis quia eius dolore nemo magni ducimus et sequi saepe, adipisci earum veniam in harum quis sunt sint suscipit doloribus nisi.</p>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. A blanditiis quia eius dolore nemo magni ducimus et sequi saepe, adipisci earum veniam in harum quis sunt sint suscipit doloribus nisi. {catagoryDDD}</p>
                 </div>
                 <div className="col-md-6">
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. A blanditiis quia eius dolore nemo magni ducimus et sequi saepe, adipisci earum veniam in harum quis sunt sint suscipit doloribus nisi.</p>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. A blanditiis quia eius dolore nemo magni ducimus et sequi saepe, adipisci earum veniam in harum quis sunt sint suscipit doloribus nisi. {catagoryDDD}</p>
                 </div>
             </div>
         </div>

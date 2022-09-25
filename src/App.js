@@ -5,18 +5,19 @@ import Header from './component/Header/Header';
 import Home from './component/Home/Home';
 import Catagory from './component/Catagory/Catagory';
 import Shimpements from './component/Shimpement/Shimpement';
-import { useState } from 'react';
+import { createContext, useState } from 'react';
  
+export const CatagoryRoni = createContext();
 
 function App() {
   const [count, setCount] = useState(10);
   return (
-    <div>
+    <CatagoryRoni.Provider value={count}>
       <h5>Header NO: {count}</h5>
       <Header count={count} setCount={setCount}></Header>
       <Home count={count}></Home>
       <Shimpements></Shimpements>
-    </div>
+    </CatagoryRoni.Provider>
   );
 }
 
