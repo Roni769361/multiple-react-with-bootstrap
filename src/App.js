@@ -12,10 +12,10 @@ export const CatagoryRoni = createContext();
 function App() {
   const [count, setCount] = useState(10);
   return (
-    <CatagoryRoni.Provider value={count}>
+    <CatagoryRoni.Provider value={[count, setCount]}>
       <h5>Header NO: {count}</h5>
-      <Header count={count} setCount={setCount}></Header>
-      <Home count={count}></Home>
+      <Header></Header>
+      <Home></Home>
       <Shimpements></Shimpements>
     </CatagoryRoni.Provider>
   );

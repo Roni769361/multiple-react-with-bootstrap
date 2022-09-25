@@ -3,14 +3,14 @@ import { CatagoryRoni } from "../../App";
 import Catagory from "../Catagory/Catagory";
 
 
-const Home =(props)=>{
-    const {count} = props;
+const Home =()=>{
+    // const {count} = props;
     const catagoryDDD = useContext(CatagoryRoni);
     return(
         <div style={{border:'2px solid black'}}>
-            <h1>Home Section Part: {count}</h1>
+            <h1>Home Section Part: {catagoryDDD}</h1>
             <h3>This is Hi {catagoryDDD}</h3>
-            <Catagory count={count}></Catagory>
+            <Catagory></Catagory>
             <AnatherPart></AnatherPart>
  
         </div>

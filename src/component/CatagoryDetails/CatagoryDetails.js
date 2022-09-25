@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
+import { CatagoryRoni } from "../../App";
 
-const CatagoryDetails =(props)=>{
-    const {count} = props;
+const CatagoryDetails =()=>{
+    // const {count} = props;
+    const count = useContext(CatagoryRoni);
     return(
         <div>
             <h3>CatagoryDetails Section</h3>
